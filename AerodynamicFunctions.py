@@ -15,8 +15,8 @@ class AerodynamicFunctions():
             - strength (float) : Strength of the source/sink
             - x_coords (float) : x-coords of the source/sink
             - y_coords (float) : y-coords of the source/sink
-            - X_meshed (float) :  2D Numpy array with the x-coords as a meshpoint
-            - Y_meshed (float) :  2D Numpy array with the y-coords as a meshpoint
+            - X_meshed (float) : 2D Numpy array with the x-coords as a meshpoint
+            - Y_meshed (float) : 2D Numpy array with the y-coords as a meshpoint
         """
 
         self.strength = strength
