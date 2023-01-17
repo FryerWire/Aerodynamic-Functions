@@ -4,21 +4,19 @@ import numpy as np
 class AerodynamicFunctions():
     """
     Methods
+        - stream_function : Generates the stream-function
         - velocity        : 2D source velocity vector that computes the
                             scalar components of u and v
-        - stream_function : generates the stream-function
     """
 
     def __init__(self, strength, x_coords, y_coords, X_meshed, Y_meshed):
         """
         Attributes
-            - strength : float || Strength of the source/sink
-            - x_coords : float || x-coords of the source/sink
-            - y_coords : float || y-coords of the source/sink
-            - X_meshed : float || 2D Numpy array
-                                  x-coords as a meshpoint
-            - Y_meshed : float || 2D Numpy array
-                                  y-coords as a meshpoint
+            - strength (float) : Strength of the source/sink
+            - x_coords (float) : x-coords of the source/sink
+            - y_coords (float) : y-coords of the source/sink
+            - X_meshed (float) :  2D Numpy array with the x-coords as a meshpoint
+            - Y_meshed (float) :  2D Numpy array with the y-coords as a meshpoint
         """
 
         self.strength = strength
@@ -30,12 +28,10 @@ class AerodynamicFunctions():
     def stream_function(self, elementary_flow):
         """
         Parameter
-            - elementary_flow : string
-                                source, sink, doublet, or vortex
+            - elementary_flow (string) : source, sink, doublet, or vortex
 
         Returns
-            - Phi : float
-                    stream function
+            - Phi (float) : stream function
         """
 
         elementary_flow = elementary_flow.lower()
@@ -62,11 +58,11 @@ class AerodynamicFunctions():
     def velocity(self, elementary_flow):
         """
         Parameter
-            - elementary_flow : string || source, sink, doublet, vortex
+            - elementary_flow (string) : Source, sink, doublet, vortex
 
         Returns
-            - u : float || x-component of the doublet velocity vector field
-            - y : float || y-component of the doublet velocity vector field
+            - u (float) : x-component of the doublet velocity vector field
+            - y (float) : y-component of the doublet velocity vector field
         """
 
         elementary_flow = elementary_flow.lower()
